@@ -2,11 +2,18 @@
 
 require_once 'header.php';
 
-?>
+if(have_posts()):
 
-<h1>Olá Mundo</h1>
+    while(have_posts()): the_post();
+    the_post_thumbnail();
+    the_title();
+    the_content();
 
-<?php
+endwhile;
+
+
+endif;
+
 require_once 'footer.php';
 
 
